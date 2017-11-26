@@ -1,3 +1,41 @@
+# Precision Control
+
+## PWM
+An integrator circuit was built that would convert a square wave output from the MSP to a triangle wave. Below is the a screenshot of the circuit constructued to accomplish the conversion. 
+
+The figure below shows the output of the circuit when a 5 kHz square wave is used as the input.
+
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/LPF.JPG)
+
+The figure below shows the output of the circuit when a 10 kHz square wave is used as the input.
+
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2100.JPG)
+
+The figure below shows the output of the circuit when a 20 kHz square wave is used as the input.
+
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2101.JPG)
+
+## R2R Digital to Analog Converter
+
+Tina TI schematic of circuit
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/DAC.JPG)
+
+Picture of circuit 
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2124.JPG)
+
+The circuit was similair to the ones of previous labs. The goal was take an digital signal and convert it to an analog signal. For this lab, an R2R ladder was constructed. 8 pins were used for this specific R2R so there are 2^8 or 255 "steps" to the ladder. 
+
+## FFT Triangle Wave
+
+Picture of FFT at 3 Hz
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2200.JPG)
+
+
+
+
+
+
+# Instructions
 # Lab 6: Precision Control
 Some applications require large amounts of voltage or current, so switching techniques must be used in order to provide the desired output. Other cases however require a finer control over the voltage or current going into them (some even require a control over resistance). So far you have looked at PWM to control the brightness of an LED, is there a way to use this to output a specified voltage or current, or even a specific waveform?
 
