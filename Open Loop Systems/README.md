@@ -1,3 +1,13 @@
+# Open Loop Systems
+
+The goal of this section of lab was to build a feedback loop that would send a corrective signal to the system. The fan from previous sections would change speed based on the temperature sensed by the LM35. 
+
+A 5 V regulator was used to push down an voltage of 20 going into the system. This caused a decent amount of heat to be present on the regulator. 
+
+The graph below shows the tempertaure of the LM35 versus the duty cycle of the fan. 
+
+
+# Instructions
 # Lab 6: Open Loop Systems
 Believe it or not, up to this point, any time that you have wanted to control your LED color or brightness so far, you have been attempting to control an Open Loop System. Basically, when in your code you state that you want a certain brightness or even a duty cycle, you are going on blind faith that the output is actually what it is supposed to be. If something seemed off, you probably went back into the code and tweaked some values. In the case of actual Systems and Control Theory, you are the feedback loop, providing some corrective signal to the system to help obtain a closer output, and we will deal with this in the Milestone. For now, we need to focus on system modeling getting a system to a desirable state. For this lab, you will be attempting to keep a voltage regulator within a specific temperature range using a DC fan which you will have control over. For this part to be a success, you need to figure out what is the minimum fan speed you need to cool off the regulator so that is stays operational.
 
