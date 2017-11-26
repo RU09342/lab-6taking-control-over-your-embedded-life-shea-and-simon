@@ -6,6 +6,7 @@ A 5 V regulator was used to push down an voltage of 20 going into the system. Th
 
 The graph below shows the tempertaure of the LM35 versus the duty cycle of the fan. 
 
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/DutyCycleTemp.JPG)
 
 # Instructions
 # Lab 6: Open Loop Systems
