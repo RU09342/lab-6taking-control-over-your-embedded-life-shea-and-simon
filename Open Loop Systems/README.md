@@ -12,6 +12,9 @@ The graph below shows the tempertaure of the LM35 versus the duty cycle of the f
 
 ![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/DutyCycleTemp.JPG)
 
+And the raw values shown below
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/tempdutyexcel.JPG)
+
 The graph shows an expoential relationship between duty cycle and temperture. In order to model this in software an expontial line may be used but some MSP microcontrollers may struggle with the mathematical computation. In order to circumvent this problem, piecewise linear functions should be used instead.
 
 # Instructions
