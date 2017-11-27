@@ -1,6 +1,6 @@
 # Precision Control
 
-The goal of this lab was to 
+The goal of this lab was to use hardware techniques to have greater control over our systems. 
 
 ## PWM
 An integrator circuit was built that would convert a square wave output from the MSP to a triangle wave. Below is the a screenshot of the circuit constructued to accomplish the conversion. 
