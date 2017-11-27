@@ -1,3 +1,28 @@
+# High Power Control
+
+The goal of this section of the lab is to learn how to drive components that require a high voltage or current. In addition it is important to understand how to keep circuit components safe when using higher voltage and current.
+
+## Relays
+
+The first way to combat high power was to use relays. Relays in this application acted as switches that would open and close the circuit based on the applied voltage. The relay was tested using a load (resistor) and a 12 V input voltage. The first step was to determine the limitations of a relay by increase the frequency of the square wave that was being passed through. 
+
+The schematic that was tested is shown below
+
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/relaysch.JPG)
+
+The square wave being passed through began to be deformed at 10 kHz and turned into a sine wave at approximatley 300 kHz.
+
+## Mosfet
+
+Similair to the relay testing, a mosfet was used in high power/ current applications. Since a mosfet doesn't rely on inductance to physically switch, it is expected that the mosfet will be able to have a higher switching speed. 
+
+The circuit tested for mosfet switching speed is below.
+
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/mosfetsch.JPG)
+
+As expected, the mosfet performed much better than the relay and could handle frequencies up to and past 120 kHz. 
+
+
 # Lab 6: "High Power" Control
 For starters, you will not be dealing with anything that is truly "high power". Instead, what I am considering "high power" is anything with the potential to damage or fry your microcontrollers if you were to drive them directly. The idea behind this part of the lab is to learn how not only to drive things that may require a high voltage or high current, but how to then protect your microcontroller from them.
 
