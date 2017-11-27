@@ -1,5 +1,7 @@
 # Precision Control
 
+The goal of this lab was to 
+
 ## PWM
 An integrator circuit was built that would convert a square wave output from the MSP to a triangle wave. Below is the a screenshot of the circuit constructued to accomplish the conversion. 
 
@@ -25,10 +27,19 @@ Picture of circuit
 
 The circuit was similair to the ones of previous labs. The goal was take an digital signal and convert it to an analog signal. For this lab, an R2R ladder was constructed. 8 pins were used for this specific R2R so there are 2^8 or 255 "steps" to the ladder. 
 
+## Loading Effects
+The effects of loading were also observed. Resistors were placed as the load of the circuit. Values of 100, 1k, 10k, and 100k ohms were observed and their effects on the triangle wave output. With each increase in resistance, the points of the triangle wave softened. 
+
 ## FFT Triangle Wave
 
 Picture of FFT at 3 Hz
 ![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2200.JPG)
+
+at 21 kHz
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2201.JPG)
+
+at 35 kHz
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2203.JPG)
 
 
 
