@@ -4,9 +4,15 @@ The goal of this section of lab was to build a feedback loop that would send a c
 
 A 5 V regulator was used to push down an voltage of 20 going into the system. This caused a decent amount of heat to be present on the regulator. 
 
+The circuit used to test this portion of the lab is below
+
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/FanCircuit.JPG)
+
 The graph below shows the tempertaure of the LM35 versus the duty cycle of the fan. 
 
 ![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/DutyCycleTemp.JPG)
+
+The graph shows an expoential relationship between duty cycle and temperture. In order to model this in software an expontial line may be used but some MSP microcontrollers may struggle with the mathematical computation. In order to circumvent this problem, piecewise linear functions should be used instead.
 
 # Instructions
 # Lab 6: Open Loop Systems
