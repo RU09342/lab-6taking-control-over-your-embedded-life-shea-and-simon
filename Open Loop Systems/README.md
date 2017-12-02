@@ -13,9 +13,45 @@ The graph below shows the tempertaure of the LM35 versus the duty cycle of the f
 ![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/DutyCycleTemp.JPG)
 
 And the raw values shown below
+
 ![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/tempdutyexcel.JPG)
 
 The graph shows an expoential relationship between duty cycle and temperture. In order to model this in software an expontial line may be used but some MSP microcontrollers may struggle with the mathematical computation. In order to circumvent this problem, piecewise linear functions should be used instead.
+
+### Code Implantation 
+
+Below is the code that controls the fan speed to adjust to the target temperature of the regulator. It works by running a linear function which sets the duty cycle of the PWM as a fuction of the target temperature. Each temperature range has a different function to control the duty cycle.
+
+```c
+	if(RegTemp > Temp + 3)          //Check if the temperature of the regulator is greater than target temperature
+        {
+                TA0CCR1 = 1000;         //Run fan at 100% Duty Cycle
+        }
+        else if(RegTemp < Temp - 3)     //Check if the temperature of the regulator is less than target temperature
+        {
+                TA0CCR1 = 0;            //Run fan at 0% Duty Cycle
+        }
+        if(Temp >= 380 && Temp < 405)   // Perform if Temperature is 38-40.5 C
+        {
+                TA0CCR1 = ((Temp/10)*(-24.87)+1035.8) ;     // y = -24.87x + 1035.8
+        }
+        else if(Temp >= 405 && Temp <= 430)                 // Perform if Temperature is 40.5-43 C
+        {
+                TA0CCR1 = ((Temp/10)*(-7.1429)+321.43) ;    // y = -7.1429x + 321.4
+        }
+        else if(Temp >= 430 && Temp <= 480)                 // Perform if Temperature is 43-48 C
+        {
+                TA0CCR1 = ((Temp/10)*(-2.0833)+108.33) ;    // y = -2.0833x + 108.33
+        }
+        else if(Temp >= 480 && Temp <= 540)                 // Perform if Temperature is 48-54 C
+        {
+                TA0CCR1 = ((Temp/10)*(-24.87)+1035.8) ;     // y = -0.8333x + 49
+        }
+        else if(Temp >= 540 && Temp <= 710)                 // Perform if Temperature is 54-71 C
+        {
+                TA0CCR1 = ((Temp/10)*(-0.8333)+49) ;        // y = -0.8333x + 49
+        }   
+```
 
 # Instructions
 # Lab 6: Open Loop Systems

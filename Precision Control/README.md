@@ -41,7 +41,17 @@ at 21 kHz
 at 35 kHz
 ![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-shea-and-simon/blob/master/Images/IMG_2203.JPG)
 
+### Bill of Materials
 
+|RefDes     | Name     	   	 |Value|Quantity|
+|-----------| ------------------ |-----|--------|
+|R1         | CF14JT1K00 	 |1k   | 9      |
+|R2         | CF14JT2K00 	 |2k   | 8      |
+|R3         | CF14JT10K0	 |10k  | 2      |
+|C1         | C320C112JDG5TA 	 |1.1n | 1      |
+|OPAMP      | TL072 	   	 |N/A  | 1      |
+
+Digi-Key Link: http://www.digikey.com/short/q3v42n
 
 
 
